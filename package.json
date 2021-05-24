@@ -1,0 +1,26 @@
+{
+  "name": "climaapp",
+  "version": "1.0.0",
+  "description": "Ask how is the wheather in diferents countries and ciies",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Laura87-web/ClimaApp.git"
+  },
+  "author": "Wenli Chu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Laura87-web/ClimaApp/issues"
+  },
+  "homepage": "https://github.com/Laura87-web/ClimaApp#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  }
+}
