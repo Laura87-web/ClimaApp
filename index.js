@@ -1,21 +1,20 @@
 require("colors")
+const PORT = 3000
 const morgan = require("morgan")
 const express = require("express")
 const app = express()
-const PORT = 3000
+const routes = require("./routes")
 
 app.use(morgan("dev"))
+app.use(routes)
+app.set("appName", "ClimaApp")//setea como appName: "ClimaApp"
+app.set("view engine", "ejs")
 
-app.get("/",function(req,res){
-    res.status(200).send("<h1>Hola, esta es la AppClima</h1>")
-})
-app.get("/home", (req, res)=>{    
-    res.status(200).send("<h1>ESTAS EN HOME</h1>")  
-    
-})
-app.get("*", (req, res)=>{
-    res.status(404).send("<h1>LA PAGINA NO EXISTE</h1>")
-})
+// console.log(__dirname + "/views")
+// app.set("views", __dirname + "/views")
+
+
 app.listen(PORT, ()=>{
     console.log(`Server listen in port ${PORT}`.magenta.bold)
+    console.log(app.get("appName").magenta)
 })
